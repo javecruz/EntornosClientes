@@ -28,7 +28,9 @@
               <Component id="clientes" min="-2" pref="102" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Component id="fabricantes" min="-2" pref="102" max="-2" attributes="0"/>
-              <EmptySpace pref="30" max="32767" attributes="0"/>
+              <EmptySpace pref="18" max="32767" attributes="0"/>
+              <Component id="pedidos" min="-2" pref="102" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="articulos" min="-2" pref="102" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
           </Group>
@@ -40,8 +42,9 @@
               <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="clientes" pref="158" max="32767" attributes="0"/>
-                  <Component id="fabricantes" max="32767" attributes="0"/>
                   <Component id="articulos" max="32767" attributes="0"/>
+                  <Component id="fabricantes" alignment="0" max="32767" attributes="0"/>
+                  <Component id="pedidos" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="67" max="32767" attributes="0"/>
           </Group>
@@ -71,6 +74,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="articulosActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="pedidos">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pedidos"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pedidosActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

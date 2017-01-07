@@ -30,6 +30,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         clientes = new javax.swing.JButton();
         fabricantes = new javax.swing.JButton();
         articulos = new javax.swing.JButton();
+        pedidos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,6 +55,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
+        pedidos.setText("Pedidos");
+        pedidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pedidosActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -63,7 +71,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addComponent(clientes, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(fabricantes, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addComponent(pedidos, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(articulos, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
         );
@@ -73,8 +83,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGap(67, 67, 67)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(clientes, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+                    .addComponent(articulos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(fabricantes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(articulos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(pedidos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(67, Short.MAX_VALUE))
         );
 
@@ -88,7 +99,8 @@ Fabricantes fab = null;
         } catch (SQLException ex) {
             Logger.getLogger(MenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-    fab.setVisible(true);        // TODO add your handling code here:
+    fab.setVisible(true);
+    this.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_fabricantesActionPerformed
 
     private void clientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientesActionPerformed
@@ -98,7 +110,8 @@ Clientes cli = null;
         } catch (SQLException ex) {
             Logger.getLogger(MenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-    cli.setVisible(true);        // TODO add your handling code here:
+    cli.setVisible(true);
+    this.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_clientesActionPerformed
 
     private void articulosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulosActionPerformed
@@ -108,8 +121,15 @@ Artículos art = null;
         } catch (SQLException ex) {
             Logger.getLogger(MenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-    art.setVisible(true);        // TODO add your handling code here:
+    art.setVisible(true);
+    this.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_articulosActionPerformed
+
+    private void pedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pedidosActionPerformed
+        Pedidos pedi=new Pedidos();
+        pedi.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_pedidosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,5 +170,6 @@ Artículos art = null;
     private javax.swing.JButton articulos;
     private javax.swing.JButton clientes;
     private javax.swing.JButton fabricantes;
+    private javax.swing.JButton pedidos;
     // End of variables declaration//GEN-END:variables
 }
